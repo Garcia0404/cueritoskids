@@ -12,7 +12,7 @@ import { ItemsCart } from "./ItemsCart";
       <CloseSvg />
     </button>
   </form>
-  <ItemsCart client:idle/>
+  <ItemsCart client:idle />
 </dialog>
 <div class="fixed right-0 left-0 bottom-0 z-20">
   <div class="container mx-auto px-4 md:px-6 flex -z-10">
@@ -25,6 +25,13 @@ import { ItemsCart } from "./ItemsCart";
     </button>
   </div>
 </div>
+<script is:inline defer>
+  const button = document.querySelector("#modal-button");
+  const dialog = document.querySelector("dialog");
+  button?.addEventListener("click", () => {
+    dialog?.showModal();
+  });
+</script>
 <style>
   dialog::backdrop {
     background: rgba(0, 0, 0, 0.9);
