@@ -10,7 +10,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/1.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 15,
   },
   {
@@ -21,7 +21,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/2.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 18,
   },
   {
@@ -32,7 +32,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/3.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 12,
   },
   {
@@ -43,7 +43,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/4.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 20,
   },
   {
@@ -54,7 +54,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/5.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 14,
   },
   {
@@ -65,7 +65,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/6.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 16,
   },
   {
@@ -76,7 +76,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/7.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 11,
   },
   {
@@ -87,7 +87,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/8.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 19,
   },
   {
@@ -98,7 +98,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/9.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 13,
   },
   {
@@ -109,7 +109,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/10.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 17,
   },
   {
@@ -120,7 +120,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/11.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 10,
   },
   {
@@ -131,7 +131,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/12.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 20,
   },
   {
@@ -142,7 +142,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/13.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 15,
   },
   {
@@ -153,7 +153,7 @@ const products = [
     colores: ["#f2f2f2", "#3B383B", "#F12722", "#000"],
     imagen: [images["../assets/images/14.webp"].default],
     tallas: ["4", "6", "8", "10", "12", "14", "16"],
-    precios: [30.0, 30.0, 30.0, 35.0, 35.0],
+    precios: [30.0, 30.0, 30.0, 30.0, 30.0, 35.0, 35.0],
     stock: 18,
   },
 ];
