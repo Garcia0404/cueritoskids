@@ -3,7 +3,7 @@ import { create } from "zustand";
 interface CartState {
   cart: ItemCart[];
   addToCart: (product: Product) => void;
-  updateQuantity: (productId: string, size: string, quantity: number) => void;
+  updateQuantity: (product: ItemCart, quantity: number) => void;
   removeFromCart: (product: Product) => void;
   clearCart: () => void;
   getTotal: () => number;
@@ -41,10 +41,12 @@ export const useCartStore = create<CartState>((set, get) => ({
       return { cart: updatedCart };
     }),
 
-  updateQuantity: (productId, size, quantity) =>
+  updateQuantity: (product, quantity) =>
     set((state) => {
       const updatedCart = state.cart.map((item) =>
-        item.id === productId && item.tallas[0] === size
+        item.id === product.id &&
+        item.tallas[0] === product.tallas[0] &&
+        item.colores[0] === product.colores[0]
           ? { ...item, cantidad: quantity }
           : item
       );
@@ -58,7 +60,12 @@ export const useCartStore = create<CartState>((set, get) => ({
 
   removeFromCart: (product) =>
     set((state) => {
-      const updatedCart = state.cart.filter((item) =>  item.id !== product.id || item.tallas[0] !== product.tallas[0] || item.colores[0] !== product.colores[0]);
+      const updatedCart = state.cart.filter(
+        (item) =>
+          item.id !== product.id ||
+          item.tallas[0] !== product.tallas[0] ||
+          item.colores[0] !== product.colores[0]
+      );
       if (typeof window !== "undefined") {
         localStorage.setItem("cart", JSON.stringify(updatedCart));
       }

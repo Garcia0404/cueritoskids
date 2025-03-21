@@ -1,12 +1,11 @@
 import { motion } from "motion/react"
-import { useEffect } from "react"
+import { Color } from "./ui/Color"
 interface Props {
-  updateQuantity: (productId: string, size: string, quantity: number) => void
+  updateQuantity: (product: ItemCart, quantity: number) => void
   product: ItemCart
   removeFromCart: (product: Product) => void
 }
 export const ItemCart = ({ updateQuantity, product, removeFromCart }: Props) => {
-  useEffect(() => console.log('la imagen es :',product.imagen[0]), [])
   return (
     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} layoutId={`${product.id}-${product.tallas[0]}-${product.colores[0]}`}>
       <article className="flex gap-4">
@@ -14,18 +13,18 @@ export const ItemCart = ({ updateQuantity, product, removeFromCart }: Props) => 
           <img src={product.imagen[0].src} width="80px" alt={product.nombre} />
         </div>
         <div className="flex flex-col flex-1">
-          <span className="font-medium">{product.nombre}</span>
-          <span className="text-white/50">Talla: {product.tallas[0]}</span>
+          <span className="font-medium line-clamp-1">{product.nombre}</span>
+          <div className="text-white/50 flex justify-between"><span>Talla: {product.tallas[0]}</span><Color className="border-white/20" color={product.colores[0]}/></div>
           <div className="flex justify-between items-center">
             <span className="text-white/80">S/ {product.precios[0]}</span>
             <div className="flex items-center gap-2">
-              <button aria-label="Disminuir en 1" onClick={() => { if (product.cantidad > 0) updateQuantity(product.id, product.tallas[0], product.cantidad - 1) }} className="cursor-pointer">
+              <button aria-label="Disminuir en 1" onClick={() => { if (product.cantidad > 0) updateQuantity(product, product.cantidad - 1) }} className="cursor-pointer">
                 <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
               </button>
               <span className="w-4 text-center">{product.cantidad}</span>
-              <button aria-label="Aumentar en 1" onClick={() => updateQuantity(product.id, product.tallas[0], product.cantidad + 1)} className="cursor-pointer">
+              <button aria-label="Aumentar en 1" onClick={() => updateQuantity(product, product.cantidad + 1)} className="cursor-pointer">
                 <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>

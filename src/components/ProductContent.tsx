@@ -21,9 +21,6 @@ export const ProductContent = ({ product }: { product: Product }) => {
       }
     })
   }, [selectedSize, selectedColor])
-  useEffect(() => {
-    console.log("producto", productSelected)
-  }, [productSelected])
   return (
     <>
       <div className="flex justify-between">
@@ -56,7 +53,7 @@ export const ProductContent = ({ product }: { product: Product }) => {
                     className="hidden"
                     onChange={(e) => setSelectedColor([e.target.value])}
                   />
-                  <Color color={color} className={color === selectedColor[0] ? "border-blue-600" : ""} />
+                  <Color color={color} className={color === selectedColor[0] ? "border-blue-600 p-1" : "p-1"} />
                 </label>
               ))}
             </form>

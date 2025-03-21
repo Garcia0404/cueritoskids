@@ -9,7 +9,7 @@ interface Product {
   nombre: string;
   descripción: string;
   colores: string[];
-  imagen: ProductImage[];
+  imagen: string[];
   tallas: string[];
   precios: number[];
   stock: number;

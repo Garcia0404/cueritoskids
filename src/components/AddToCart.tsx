@@ -1,15 +1,10 @@
-import { useEffect } from "react";
 import { useCartStore } from "../utils/cart"
 
 export const AddToCart = ({ product }: { product: Product }) => {
-  const { cart } = useCartStore()
   const addToCart = useCartStore((state) => state.addToCart);
   const handleAddToCart = () => {
     addToCart(product);
   };
-  useEffect(() => {
-    console.log(cart)
-  }, [cart])
   return (
     <button
       onClick={handleAddToCart}
