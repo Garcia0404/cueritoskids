@@ -14,7 +14,7 @@ export const AddToCart = ({ product }: { product: Product }) => {
     <button
       onClick={handleAddToCart}
       aria-label="agregar al carrito"
-      className="cursor-pointer z-20 hover:outline outline-white/30 rounded-full p-1 active:scale-80 transition-transform h-min"
+      className="cursor-pointer z-20 outline outline-white/30 hover:outline-white rounded-full p-1 active:scale-80 transition-transform h-min"
     >
       <svg
         fill="none"

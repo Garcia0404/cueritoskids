@@ -1,15 +1,17 @@
 import { motion } from "motion/react"
+import { useEffect } from "react"
 interface Props {
   updateQuantity: (productId: string, size: string, quantity: number) => void
   product: ItemCart
   removeFromCart: (product: Product) => void
 }
 export const ItemCart = ({ updateQuantity, product, removeFromCart }: Props) => {
+  useEffect(() => console.log('la imagen es :',product.imagen[0]), [])
   return (
     <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} layoutId={`${product.id}-${product.tallas[0]}-${product.colores[0]}`}>
       <article className="flex gap-4">
         <div className="rounded-md overflow-hidden">
-          <img src="/src/assets/images/1.webp" width="80px" alt="item" />
+          <img src={product.imagen[0].src} width="80px" alt={product.nombre} />
         </div>
         <div className="flex flex-col flex-1">
           <span className="font-medium">{product.nombre}</span>

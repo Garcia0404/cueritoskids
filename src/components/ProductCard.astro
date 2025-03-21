@@ -5,12 +5,13 @@ interface Props {
   product: Product;
 }
 const { product } = Astro.props;
+const image = product.imagen[0] as ImageMetadata ;
 ---
 
 <div class="group relative overflow-hidden rounded-lg border border-white/20">
   <div class="overflow-hidden">
     <Image
-      src={product.imagen[0]}
+      src={image}
       width={413}
       height={240}
       alt={product.nombre}

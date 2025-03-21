@@ -1,5 +1,5 @@
 const images = import.meta.glob("../assets/images/*.webp", { eager: true }) as Record<string, { default: string }>;
-const products = [
+export const products = [
   {
     id: "10001",
     nombre: "Camiseta Minecraft",
