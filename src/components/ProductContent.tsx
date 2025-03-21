@@ -29,11 +29,11 @@ export const ProductContent = ({ product }: { product: Product }) => {
           <label className="text-sm text-white/50 flex gap-2 items-center pt-1">
             Talla:
             <select name="select" onChange={(e) => setSelectedSize(e.target.value)} value={selectedSize} className="bg-zinc-900 rounded-md px-1 outline-none h-full">
-              <option value="0">4</option>
-              <option value="1">8</option>
-              <option value="2">12</option>
-              <option value="3">14</option>
-              <option value="4">16</option>
+              {product.tallas.map((talla, index) => (
+                <option key={talla} value={index}>
+                  {talla}
+                </option>
+              ))}
             </select>
           </label>
         </div>

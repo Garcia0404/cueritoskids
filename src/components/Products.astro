@@ -23,33 +23,7 @@ const products = await getProducts();
     <div
       class="grid min-[450px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8"
     >
-      {
-        [1, 2, 3, 4].map((product) => (
-          <ProductCard product={products[product]} />
-        ))
-      }
-    </div>
-    <div class="flex justify-center mt-12">
-      <button
-        onclick="alert('No available');"
-        class="bg-blue-600 hover:bg-blue-500 cursor-pointer transition-all px-4 py-2 rounded-3xl flex items-center gap-1"
-      >
-        <span>Ver más</span>
-        <div class="translate-y-0.5">
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-4"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-          </svg>
-        </div>
-      </button>
+      {products.map((product) => <ProductCard product={product} />)}
     </div>
   </div>
 </section>
