@@ -1,0 +1,37 @@
+---
+import PhoneSvg from "./ui/PhoneSvg.astro";
+---
+
+<header
+  class="sticky top-0 left-0 w-full px-4 py-2.5 bg-[rgba(0,0,0,0.5)] backdrop-blur-lg border-b border-white/20 flex z-30"
+>
+  <div class="flex justify-between w-full">
+    <div class="flex items-center gap-2">
+      <span
+        ><svg
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width={1.5}
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          ></path>
+        </svg>
+      </span>
+      <span class="text-xl font-bold line-clamp-1">Cueritos Kids</span>
+    </div>
+    <div>
+      <button
+        aria-label="Enviar un mensaje"
+        class="bg-blue-600 flex items-center gap-2 py-1 px-4 cursor-pointer rounded-md"
+      >
+        <span><PhoneSvg class="size-4" /></span>
+        <span>Ordenar</span>
+      </button>
+    </div>
+  </div>
+</header>

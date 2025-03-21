@@ -1,22 +1,31 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" style="scrollbar-width: thin;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Bienvenido a Cueritos Kids, en donde encontrarás ropa para niños de alta calidad y excelentes diseños."
+    />
+    <link rel="icon" type="image/svg+xml" href="/logo.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cueritos Kids</title>
+  </head>
+  <body class="bg-[#080808] text-white">
+    <Header />
+    <slot />
+  </body>
+  <script src="/src/scripts/modal.js" is:inline defer></script>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+  }
 </style>

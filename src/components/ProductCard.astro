@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import { ProductContent } from "./ProductContent";
+interface Props {
+  product: Product;
+}
+const { product } = Astro.props;
+---
+
+<div class="group relative overflow-hidden rounded-lg border border-white/20">
+  <div class="overflow-hidden">
+    <Image
+      src={product.imagen[0]}
+      width={413}
+      height={240}
+      alt={product.nombre}
+      class="h-60 w-full object-cover object-top transition-transform group-hover:scale-110"
+    />
+  </div>
+  <div class="p-4 flex flex-col">
+    <ProductContent product={product} client:only="react"/>
+  </div>
+</div>

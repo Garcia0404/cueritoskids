@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import { cueritos } from "../utils/cueritos";
+---
+
+<section class="bg-blue-600 py-16 text-white overflow-hidden">
+  <div class="container mx-auto">
+    <div class="max-w-xl mx-auto text-center relative z-10 px-2">
+      <Image
+        loading="lazy"
+        src={cueritos}
+        width={600}
+        alt="El gerente de Darkuero"
+        height={400}
+        class="absolute top-0 left-0 md:-translate-x-2/3 lg:-translate-x-3/4 -translate-y-1/3 -z-10"
+      />
+      <h2 class="text-3xl font-bold mb-4">
+        ¡No te pierdas nuestras novedades!
+      </h2>
+      <p class="mb-6">
+        Suscríbete para recibir información sobre nuevas colecciones y ofertas
+        exclusivas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-2">
+        <input
+          type="email"
+          placeholder="Tu correo electrónico"
+          class="flex-1 px-4 py-3 rounded-md text-black bg-white"
+        />
+        <button aria-label="Click para suscribirse y recibir promociones" class="bg-black hover:bg-gray-800 px-6 py-2 rounded-md"
+          >Suscribirse</button
+        >
+      </div>
+    </div>
+  </div>
+</section>
